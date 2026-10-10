@@ -1,0 +1,777 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background: linear-gradient(135deg, #ffe5f1, #fff5fb, #e8f7ff);
+  color: #5c4050;
+}
+
+/* =========================
+   PAGES
+========================= */
+
+.page {
+  display: none;
+  width: 100%;
+  height: 100dvh;
+  min-height: 100dvh;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 12px;
+
+  overflow: hidden;
+}
+
+.active-page {
+  display: flex;
+}
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.page-content {
+  width: 100%;
+  max-width: 700px;
+  max-height: 94dvh;
+
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 12px 35px rgba(180, 100, 150, 0.2);
+
+  overflow-y: auto;
+
+  animation: pageEnter 0.6s ease;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* =========================
+   TEXT
+========================= */
+
+h1 {
+  font-size: 42px;
+  color: #e85d9e;
+  margin: 18px 0;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 32px;
+  color: #df5797;
+  margin: 18px 0;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 24px;
+  color: #d85091;
+  margin: 15px 0;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =========================
+   HOME
+========================= */
+
+.bunny {
+  font-size: 60px;
+  margin-bottom: 8px;
+}
+
+.friends {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 15px 0;
+}
+
+.friend {
+  text-align: center;
+}
+
+.person {
+  font-size: 58px;
+}
+
+.friend p {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.home-text {
+  margin: 18px auto;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.main-button,
+.cake-button {
+  border: none;
+
+  padding: 14px 25px;
+  margin-top: 20px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(
+    135deg,
+    #ff78b7,
+    #e85d9e
+  );
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 18px rgba(232, 93, 158, 0.25);
+
+  transition: 0.2s;
+}
+
+.main-button:hover,
+.cake-button:hover {
+  transform: translateY(-2px);
+}
+
+.main-button:active,
+.cake-button:active {
+  transform: scale(0.96);
+}
+
+/* =========================
+   ICONS
+========================= */
+
+.big-icon {
+  font-size: 65px;
+  margin-bottom: 8px;
+}
+
+.cute-box {
+  font-size: 48px;
+  margin: 20px;
+}
+
+.birthday-emojis {
+  font-size: 30px;
+  margin: 20px;
+}
+
+.big-heart {
+  font-size: 85px;
+  animation: heartBeat 1.2s infinite;
+}
+
+@keyframes heartBeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+.wish-stars {
+  font-size: 30px;
+  margin: 20px;
+}
+
+/* =========================
+   CAKE
+========================= */
+
+.cake-area {
+  position: relative;
+
+  width: 280px;
+  height: 220px;
+
+  margin: 20px auto;
+}
+
+.candle {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 5;
+}
+
+.candle-stick {
+  width: 20px;
+  height: 65px;
+
+  background: #ffb6d9;
+
+  border-radius: 8px;
+
+  border: 2px solid #e985b5;
+}
+
+.flame {
+  font-size: 34px;
+
+  margin-bottom: -5px;
+
+  animation: flicker 0.4s infinite alternate;
+}
+
+@keyframes flicker {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.12);
+  }
+}
+
+.cake {
+  position: absolute;
+
+  bottom: 5px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 220px;
+}
+
+.cake-top {
+  height: 42px;
+
+  background: #ffb6d9;
+
+  border-radius: 15px 15px 5px 5px;
+
+  position: relative;
+}
+
+.icing-drip {
+  position: absolute;
+
+  width: 24px;
+  height: 24px;
+
+  background: white;
+
+  border-radius: 0 0 15px 15px;
+
+  bottom: -9px;
+}
+
+.drip1 {
+  left: 22px;
+}
+
+.drip2 {
+  left: 75px;
+}
+
+.drip3 {
+  left: 128px;
+}
+
+.drip4 {
+  left: 178px;
+}
+
+.cake-body {
+  height: 65px;
+
+  background: #ff82b9;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 22px;
+
+  font-size: 23px;
+}
+
+.cake-bottom {
+  height: 24px;
+
+  background: #e95c9c;
+
+  border-radius: 0 0 12px 12px;
+}
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+  display: none !important;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+textarea {
+  width: 100%;
+
+  min-height: 140px;
+
+  resize: none;
+
+  border: 2px solid #ffc1dd;
+
+  border-radius: 18px;
+
+  padding: 14px;
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  outline: none;
+
+  margin-top: 12px;
+
+  background: white;
+}
+
+textarea:focus {
+  border-color: #e85d9e;
+}
+
+#savedMessage {
+  margin-top: 12px;
+
+  color: #e85d9e;
+
+  font-weight: bold;
+}
+
+/* =========================
+   FILE UPLOAD
+========================= */
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-button {
+  display: inline-block;
+
+  padding: 12px 22px;
+
+  margin-top: 15px;
+
+  background: #ffb6d9;
+
+  color: #7d405c;
+
+  border-radius: 25px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+/* =========================
+   PHOTOS
+========================= */
+
+.photo-gallery {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 15px;
+
+  max-height: 160px;
+
+  overflow-y: auto;
+}
+
+.photo-gallery img {
+  width: 85px;
+  height: 85px;
+
+  object-fit: cover;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  border: 3px solid white;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   SONG
+========================= */
+
+audio {
+  width: 100%;
+
+  margin-top: 15px;
+}
+
+/* =========================
+   WISHES
+========================= */
+
+.wishes {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 15px;
+}
+
+.wish {
+  background: #fff0f7;
+
+  padding: 12px;
+
+  border-radius: 16px;
+
+  font-size: 16px;
+
+  line-height: 1.4;
+}
+
+/* =========================
+   END PAGE
+========================= */
+
+.ending-characters {
+  font-size: 42px;
+
+  margin-bottom: 15px;
+}
+
+.ending-hearts {
+  font-size: 30px;
+
+  margin: 20px 0;
+}
+
+.final-message {
+  color: #e85d9e;
+
+  font-weight: bold;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+  display: none;
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.8);
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.lightbox.show {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+
+  border-radius: 18px;
+}
+
+.close-btn {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  border: none;
+
+  background: white;
+
+  color: #e85d9e;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.hearts {
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+
+  bottom: -30px;
+
+  font-size: 20px;
+
+  animation: floatHeart 6s linear forwards;
+}
+
+@keyframes floatHeart {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+/* =================================================
+   PHONE VERSION
+================================================= */
+
+@media (max-width: 600px) {
+
+  .page {
+    padding: 8px;
+    height: 100dvh;
+    min-height: 100dvh;
+  }
+
+  .page-content {
+    width: 100%;
+    max-width: 100%;
+
+    max-height: 96dvh;
+
+    padding: 22px 15px;
+
+    border-radius: 24px;
+  }
+
+  h1 {
+    font-size: 29px;
+    margin: 14px 0;
+  }
+
+  h2 {
+    font-size: 25px;
+    margin: 14px 0;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .bunny {
+    font-size: 48px;
+  }
+
+  .friends {
+    gap: 25px;
+    margin: 10px 0;
+  }
+
+  .person {
+    font-size: 45px;
+  }
+
+  .friend p {
+    font-size: 13px;
+  }
+
+  .big-icon {
+    font-size: 55px;
+  }
+
+  .cute-box {
+    font-size: 40px;
+    margin: 15px;
+  }
+
+  .birthday-emojis {
+    font-size: 25px;
+    margin: 15px;
+  }
+
+  .big-heart {
+    font-size: 75px;
+  }
+
+  .main-button,
+  .cake-button {
+    width: 90%;
+    max-width: 300px;
+
+    padding: 13px 18px;
+
+    font-size: 15px;
+
+    margin-top: 16px;
+  }
+
+  .cake-area {
+    transform: scale(0.85);
+
+    margin-top: 5px;
+    margin-bottom: -5px;
+  }
+
+  textarea {
+    min-height: 120px;
+
+    font-size: 15px;
+  }
+
+  .upload-button {
+    padding: 11px 18px;
+
+    font-size: 14px;
+  }
+
+  .photo-gallery {
+    max-height: 130px;
+  }
+
+  .photo-gallery img {
+    width: 70px;
+    height: 70px;
+  }
+
+  audio {
+    width: 100%;
+  }
+
+  .wish {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .ending-characters {
+    font-size: 32px;
+  }
+
+  .ending-hearts {
+    font-size: 25px;
+  }
+}
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 380px) {
+
+  .page-content {
+    padding: 18px 12px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .cake-area {
+    transform: scale(0.72);
+    margin-top: -5px;
+    margin-bottom: -25px;
+  }
+
+  .friends {
+    gap: 18px;
+  }
+
+  .person {
+    font-size: 40px;
+  }

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday Vetrivel 🎂</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- FLOATING HEARTS -->
+  <div class="hearts"></div>
+
+
+  <!-- ==========================================
+       PAGE 1 : HOME
+       ========================================== -->
+
+  <section id="page1" class="page active-page">
+
+    <div class="page-content">
+
+      <div class="bunny">
+        🐰🎀
+      </div>
+
+      <div class="friends">
+
+        <div class="friend">
+          <div class="person">
+            👧🏻
+          </div>
+
+          <p>
+            Bestie 💗
+          </p>
+        </div>
+
+        <div class="friend">
+          <div class="person">
+            👦🏻
+          </div>
+
+          <p>
+            Birthday Boy 🎂
+          </p>
+        </div>
+
+      </div>
+
+      <h1>
+        Happy Birthday Vetrivel! 🎂
+      </h1>
+
+      <p class="home-text">
+        Today is all about you! 💗
+        <br>
+        Get ready for a little surprise filled with
+        happiness, memories and love. ✨
+      </p>
+
+      <button
+        class="main-button"
+        onclick="nextPage(2)"
+      >
+        🎁 Open Your Surprise
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       PAGE 2 : SURPRISE
+       ========================================== -->
+
+  <section id="page2" class="page">
+
+    <div class="page-content">
+
+      <div class="big-icon">
+        🎁
+      </div>
+
+      <h2>
+        A Little Surprise For You 💗
+      </h2>
+
+      <p>
+        You are an amazing friend and today is the
+        perfect day to celebrate you! 💕
+      </p>
+
+      <div class="cute-box">
+        🎀 💗 🎀
+      </div>
+
+      <button
+        class="main-button"
+        onclick="nextPage(3)"
+      >
+        💕 Next
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       PAGE 3 : BIRTHDAY MESSAGE
+       ========================================== -->
+
+  <section id="page3" class="page">
+
+    <div class="page-content">
+
+      <div class="big-icon">
+        🎂
+      </div>
+
+      <h2>
+        Happy Birthday Once Again! 🎉
+      </h2>
+
+      <p>
+        Wishing you a wonderful birthday filled with
+        happiness, laughter, beautiful memories and
+        lots of success! 🌸✨
+      </p>
+
+      <div class="birthday-emojis">
+        🎈 🎉 🎂 🎁 💗 ✨
+      </div>
+
+      <button
+        class="main-button"
+        onclick="nextPage(4)"
+      >
+        🎂 See Your Cake
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       PAGE 4 : CAKE
+       ========================================== -->
+
+  <section id="page4" class="page">
+
+    <div class="page-content cake-page">
+
+      <div class="big-icon">
+        🎂
+      </div>
+
+      <h2>
+        A Special Birthday Cake
+      </h2>
+
+      <p>
+        Make a wish before you cut your cake! 💗
+      </p>
+
+      <div class="cake-area">
+
+        <!-- CANDLE -->
+        <div class="candle">
+
+          <div
+            id="flame"
+            class="flame"
+          >
+            🔥
+          </div>
+
+          <div class="candle-stick"></div>
+
+        </div>
+
+
+        <!-- CAKE -->
+        <div class="cake">
+
+          <div class="cake-top">
+
+            <span class="icing-drip drip1"></span>
+            <span class="icing-drip drip2"></span>
+            <span class="icing-drip drip3"></span>
+            <span class="icing-drip drip4"></span>
+
+          </div>
+
+          <div class="cake-body">
+
+            <span>
+              💗
+            </span>
+
+            <span>
+              ✨
+            </span>
+
+            <span>
+              💗
+            </span>
+
+          </div>
+
+          <div class="cake-bottom"></div>
+
+        </div>
+
+      </div>
+
+
+      <!-- BLOW AREA -->
+
+      <div id="blowArea">
+
+        <h3>
+          🕯️ Make a Wish!
+        </h3>
+
+        <p>
+          Close your eyes, make your wish
+          <br>
+          and then blow the candle! ✨
+        </p>
+
+        <button
+          class="cake-button"
+          onclick="blowCandle()"
+        >
+          💨 Blow the Candle
+        </button>
+
+      </div>
+
+
+      <!-- CUT AREA -->
+
+      <div
+        id="cutArea"
+        class="hidden"
+      >
+
+        <div class="celebration-icon">
+          🎉
+        </div>
+
+        <h3>
+          Yayyy! Candle is out! 🕯️💗
+        </h3>
+
+        <p>
+          Your wish is on its way! ✨
+          <br>
+          Now let's cut the cake! 🎂
+        </p>
+
+        <button
+          class="cake-button"
+          onclick="cutCake()"
+        >
+          🔪 Cut the Cake
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       PAGE 5 : CAKE CUT
+       ========================================== -->
+
+  <section id="page5" class="page">
+
+    <div class="page-content">
+
+      <div class="big-icon">
+        🍰💗
+      </div>
+
+      <h2>
+        Cake Cut Successfully! 🎂
+      </h2>
+
+      <p>
+        Yayyy! You cut the birthday cake! 🎉
+      </p>
+
+      <p>
+        Now it's time to make your special
+        birthday wish. ✨
+      </p>
+
+      <button
+        class="main-button"
+        onclick="nextPage(6)"
+      >
+        ✨ Make a Wish
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       PAGE 6 : WISH
+       ========================================== -->
+
+  <section id="page6" class="page">
+
+    <div class="page-content">
+
+      <div class="big-heart">
+        💗
+      </div>
+
+      <h2>
+        Your Wish Has Been Made! ✨
+      </h2>
+
+      <p>
+        May all your dreams come true,
+        <br>
+        and may this year bring you
+        lots of happiness and success! 🌸
+      </p>
+
+      <div class="wish-stars">
+        ✨ ⭐ ✨
+      </div>
+
+      <button
+        class="main-button"
+        onclick="nextPage(7)"
+      >
+        💌 Next Surprise
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       PAGE 7 : LETTER
+       ========================================== -->
+
+  <section id="page7" class="page">
+
+    <div class="page-content letter-page">
+
+      <div class="big-icon">
+        💌
+      </div>
+
+      <h2>
+        A Little Letter For You 💕
+      </h2>
+
+      <div class="letter-card">
+
+        <h2>
+          💌 For My Kuchuu Puchuu 💕
+        </h2>
+
+        <p>
+          Hlooo Kuchuu Puchuu 🫂💕
+        </p>
+
+        <p>
+          Happy Birth"dei" to uhh! 🎂❤️
+          Life long happy ahh iru and let all
+          your dreams come true. ✨
+        </p>
+
+        <p>
+          Unnoda goals ahh achieve pannu and
+          always be proud of yourself. 💫
+        </p>
+
+        <p>
+          Na eppavum unkooda irupan —
+          un life-oda ups and downs la. 🫂❤️
+        </p>
+
+        <p>
+          Ennatha unakku neriya friends irunthalum,
+          ennaku ne the one and only male bestfriend
+          from then till now. 💕🫶
+        </p>
+
+        <p>
+          Unakku eppavachu heart rombo heavy ahh
+          feel achuna, enkita sollu.
+          Na iruken unna heal pandrathuku. 🫂❤️
+        </p>
+
+        <p>
+          And also, promise me that our friendship
+          should never break even if some new people
+          come into your life. 🤝💕
+        </p>
+
+        <p>
+          Eppavum happy ahh iru, correct ahh iru,
+          ithey maari thangamana payan maari iru.
+          🥹❤️✨
+        </p>
+
+        <p>
+          Enjoy your day! 🎂🎉
+        </p>
+
+        <p class="final-letter">
+          Once again,
+          <br>
+          Happy Birthday My Boy! 🎂❤️🫂💕
+        </p>
+
+      </div>
+
+      <button
+        class="main-button"
+        onclick="nextPage(8)"
+      >
+        📸 See Our Memories
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       PAGE 8 : PHOTOS
+       ========================================== -->
+
+  <section id="page8" class="page">
+
+    <div class="page-content">
+
+      <div class="big-icon">
+        📸
+      </div>
+
+      <h2>
+        Our Memories
+      </h2>
+
+      <p>
+        Our favourite memories together! 💗
+      </p>
+
+      <!-- PHOTOS COME AUTOMATICALLY FROM SUPABASE -->
+      <div
+        id="photoGallery"
+        class="photo-gallery"
+      ></div>
+
+      <button
+        class="main-button"
+        onclick="nextPage(9)"
+      >
+        🎵 Next
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       PAGE 9 : SONG
+       ========================================== -->
+
+  <section id="page9" class="page">
+
+    <div class="page-content">
+
+      <div class="big-icon">
+        🎵
+      </div>
+
+      <h2>
+        Our Birthday Song
+      </h2>
+
+      <p id="songName">
+        🎵 Your special song ❤️
+      </p>
+
+      <audio
+        id="audioPlayer"
+        controls
+      >
+      </audio>
+
+      <br>
+
+      <button
+        class="main-button"
+        onclick="nextPage(10)"
+      >
+        💖 Birthday Wishes
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       PAGE 10 : WISHES
+       ========================================== -->
+
+  <section id="page10" class="page">
+
+    <div class="page-content">
+
+      <div class="big-icon">
+        💖
+      </div>
+
+      <h2>
+        Birthday Wishes
+      </h2>
+
+      <div class="wishes">
+
+        <div class="wish">
+          🌸 May your life always be filled
+          with happiness.
+        </div>
+
+        <div class="wish">
+          ✨ May all your dreams come true.
+        </div>
+
+        <div class="wish">
+          🎓 Wishing you success in everything
+          you do.
+        </div>
+
+        <div class="wish">
+          💗 Stay happy, stay kind and
+          keep smiling!
+        </div>
+
+        <div class="wish">
+          🎂 Have the most amazing birthday ever!
+        </div>
+
+      </div>
+
+      <button
+        class="main-button"
+        onclick="nextPage(11)"
+      >
+        🎉 One Last Surprise
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       PAGE 11 : FINAL
+       ========================================== -->
+
+  <section id="page11" class="page">
+
+    <div class="page-content">
+
+      <div class="ending-characters">
+        🐰🎀 👧🏻 💗 👦🏻 🎂
+      </div>
+
+      <h2>
+        Once Again,
+        <br>
+        Happy Birthday Vetrivel! 🎉
+      </h2>
+
+      <p>
+        Keep smiling and enjoy your special day! 💗
+      </p>
+
+      <div class="ending-hearts">
+        💕 💗 💕 💗 💕
+      </div>
+
+      <p class="final-message">
+        Made with lots of love 💗✨
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       LIGHTBOX
+       ========================================== -->
+
+  <div
+    id="lightbox"
+    class="lightbox"
+  >
+
+    <button
+      id="closeLightbox"
+      class="close-btn"
+    >
+      ✕
+    </button>
+
+    <img
+      id="lightboxImage"
+      src=""
+      alt="Memory"
+    >
+
+  </div>
+
+
+  <!-- SUPABASE -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- YOUR JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
